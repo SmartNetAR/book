@@ -159,7 +159,7 @@ ${r.map((n,i)=>`${i+1}) ${n.toString()}`).join(`
 
     .social-links[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover   svg[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {
         fill: var(--gray-900);
-    }`]});let t=e;return t})();function nb(t,e){if(t&1&&(A(0,"option",5),ie(1),N()),t&2){let r=e.$implicit;G("value",r.value),B(),dt(r.label)}}var Xp=(()=>{let e=class e{constructor(){this.model="",this.select="",this.exampleOptions=[{value:"putWords",label:"Put Words"},{value:"write-questions",label:"Write Questions"}],this.examples={putWords:`[
+    }`]});let t=e;return t})();function nb(t,e){if(t&1&&(A(0,"option",5),ie(1),N()),t&2){let r=e.$implicit;G("value",r.value),B(),dt(r.label)}}var Xp=(()=>{let e=class e{constructor(){this.model="",this.select="",this.exampleOptions=[{value:"putWords",label:"Put Words"},{value:"write-questions",label:"Write Questions"},{value:"write-sentence",label:"Write Sentence"}],this.examples={putWords:`[
   {
     "id": "1A",
     "name": "Think positive - or negative",
@@ -213,6 +213,34 @@ ${r.map((n,i)=>`${i+1}) ${n.toString()}`).join(`
               "userResponse": {
                 "text": ""
               }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]`,"write-sentence":`[
+  {
+    "id": "1B",
+    "name": "Charlotte's choice",
+    "sections": {
+      "id": 1,
+      "name": "grammar",
+      "title": "present simple",
+      "activities": [
+        {
+          "id": "a",
+          "title": "Write negative sentences.",
+          "type": "write-sentence",
+          "exercises": [
+            {
+              "id": 1,
+              "statement": "You get up early.",
+              "expectedResponse": "You don't get up early.",
+              "userResponse": {
+                "text": ""
+              },
+              "words": []
             }
           ]
         }
@@ -373,7 +401,7 @@ ${r.map((n,i)=>`${i+1}) ${n.toString()}`).join(`
 
     .social-links[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover   svg[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {
         fill: var(--gray-900);
-    }`]});let t=e;return t})();var tg=(()=>{let e=class e{set exercise(n){this.mappedExercise=V(g({},n),{statement:this.getStatementTip(n).text,statementTip:this.getStatementTip(n),expectedResponse:n.statement})}getStatementTip(n){let i=n.words.map(c=>c.toLowerCase()),a=n.statement.split(/(\b[\wáéíóúü']+\b)/).filter(Boolean).filter(c=>!i.includes(c.trim().toLowerCase())).join("").trim();return a=a.replace(/\s+/g," "),a=a.replace(/\s*([\.,;:!?])(?!\w)/g,"$1"),{text:a}}};e.\u0275fac=function(i){return new(i||e)},e.\u0275cmp=J({type:e,selectors:[["app-put-words-exercise"]],inputs:{exercise:"exercise"},standalone:!0,features:[X],decls:1,vars:1,consts:[["activityType","put-words",3,"exercise"]],template:function(i,o){i&1&&z(0,"app-exercise",0),i&2&&G("exercise",o.mappedExercise)},dependencies:[Qn]});let t=e;return t})();var ng=(()=>{let e=class e{ngOnInit(){this.mappedExercise=V(g({},this.exercise),{statement:this.getStatementTip(this.exercise).text,statementTip:this.getStatementTip(this.exercise),expectedResponse:this.exercise.statement})}getStatementTip(n){return{text:n.statement.replace(n.expectedResponse,"").trim()}}};e.\u0275fac=function(i){return new(i||e)},e.\u0275cmp=J({type:e,selectors:[["app-write-questions-exercise"]],inputs:{exercise:"exercise"},standalone:!0,features:[X],decls:1,vars:1,consts:[["activityType","write-questions",3,"exercise"]],template:function(i,o){i&1&&z(0,"app-exercise",0),i&2&&G("exercise",o.mappedExercise)},dependencies:[Qn]});let t=e;return t})();var rg=(()=>{let e=class e{set exercise(n){this.mappedExercise=V(g({},n),{statementTip:this.getStatementTip(n),expectedResponse:n.expectedResponse})}getStatementTip(n){return{text:this.firstMatchingWords(n.statement,n.expectedResponse)}}firstMatchingWords(n,i){let o=n.split(" "),s=i.split(" ");for(let a=0;a<Math.min(o.length,s.length);a++)if(o[a]===s[a])return o[a];return""}};e.\u0275fac=function(i){return new(i||e)},e.\u0275cmp=J({type:e,selectors:[["app-write-sentence-exercise"]],inputs:{exercise:"exercise"},standalone:!0,features:[X],decls:1,vars:1,consts:[["activityType","write-questions",3,"exercise"]],template:function(i,o){i&1&&z(0,"app-exercise",0),i&2&&G("exercise",o.mappedExercise)},dependencies:[Qn]});let t=e;return t})();var Fu=(t,e)=>e.id;function ob(t,e){if(t&1&&z(0,"app-put-words-exercise",2),t&2){let r=Re().$implicit;G("exercise",r)}}function sb(t,e){if(t&1&&z(0,"app-write-questions-exercise",2),t&2){let r=Re().$implicit;G("exercise",r)}}function ab(t,e){if(t&1&&z(0,"app-write-sentence-exercise",2),t&2){let r=Re().$implicit;G("exercise",r)}}function cb(t,e){if(t&1&&Se(0,ob,1,1)(1,sb,1,1)(2,ab,1,1),t&2){let r=Re().$implicit,n;_t(0,(n=r.type)==="put-words"?0:n==="write-questions"?1:n==="write-sentence"?2:-1)}}function ub(t,e){if(t&1&&(A(0,"div",1)(1,"h3"),ie(2),N(),Fn(3,cb,3,1,null,null,Fu),N()),t&2){let r=e.$implicit;B(2),Ln("",r.id,". ",r.title,""),B(),kn(r.exercises)}}function lb(t,e){if(t&1&&(A(0,"h1"),ie(1),N(),A(2,"div",0)(3,"h2"),ie(4),N(),A(5,"p"),ie(6),N()(),A(7,"div"),Fn(8,ub,5,2,"div",3,Fu),N()),t&2){let r=e.$implicit;B(),Ln("",r.id," ",r.name,""),B(3),dt(r.sections.name),B(2),dt(r.sections.title),B(2),kn(r.sections.activities)}}var ig=(()=>{let e=class e{constructor(){this.lessons=[]}};e.\u0275fac=function(i){return new(i||e)},e.\u0275cmp=J({type:e,selectors:[["app-lessons"]],inputs:{lessons:"lessons"},standalone:!0,features:[X],decls:2,vars:0,consts:[[2,"display","flex","gap","10px","align-items","baseline"],[1,"activity"],[3,"exercise"],["class","activity"]],template:function(i,o){i&1&&Fn(0,lb,10,4,null,null,Fu),i&2&&kn(o.lessons)},dependencies:[ng,tg,rg,en],styles:[`[_nghost-%COMP%] {
+    }`]});let t=e;return t})();var tg=(()=>{let e=class e{set exercise(n){this.mappedExercise=V(g({},n),{statement:this.getStatementTip(n).text,statementTip:this.getStatementTip(n),expectedResponse:n.statement})}getStatementTip(n){let i=n.words.map(c=>c.toLowerCase()),a=n.statement.split(/(\b[\wáéíóúü']+\b)/).filter(Boolean).filter(c=>!i.includes(c.trim().toLowerCase())).join("").trim();return a=a.replace(/\s+/g," "),a=a.replace(/\s*([\.,;:!?])(?!\w)/g,"$1"),{text:a}}};e.\u0275fac=function(i){return new(i||e)},e.\u0275cmp=J({type:e,selectors:[["app-put-words-exercise"]],inputs:{exercise:"exercise"},standalone:!0,features:[X],decls:1,vars:1,consts:[["activityType","put-words",3,"exercise"]],template:function(i,o){i&1&&z(0,"app-exercise",0),i&2&&G("exercise",o.mappedExercise)},dependencies:[Qn]});let t=e;return t})();var ng=(()=>{let e=class e{set exercise(n){this.mappedExercise=V(g({},n),{statement:this.getStatementTip(n).text,statementTip:this.getStatementTip(n),expectedResponse:n.statement})}getStatementTip(n){return{text:n.statement.replace(n.expectedResponse,"").trim()}}};e.\u0275fac=function(i){return new(i||e)},e.\u0275cmp=J({type:e,selectors:[["app-write-questions-exercise"]],inputs:{exercise:"exercise"},standalone:!0,features:[X],decls:1,vars:1,consts:[["activityType","write-questions",3,"exercise"]],template:function(i,o){i&1&&z(0,"app-exercise",0),i&2&&G("exercise",o.mappedExercise)},dependencies:[Qn]});let t=e;return t})();var rg=(()=>{let e=class e{set exercise(n){this.mappedExercise=V(g({},n),{statementTip:this.getStatementTip(n),expectedResponse:n.expectedResponse})}getStatementTip(n){return{text:this.firstMatchingWords(n.statement,n.expectedResponse)}}firstMatchingWords(n,i){let o=n.split(" "),s=i.split(" ");for(let a=0;a<Math.min(o.length,s.length);a++)if(o[a]===s[a])return o[a];return""}};e.\u0275fac=function(i){return new(i||e)},e.\u0275cmp=J({type:e,selectors:[["app-write-sentence-exercise"]],inputs:{exercise:"exercise"},standalone:!0,features:[X],decls:1,vars:1,consts:[["activityType","write-questions",3,"exercise"]],template:function(i,o){i&1&&z(0,"app-exercise",0),i&2&&G("exercise",o.mappedExercise)},dependencies:[Qn]});let t=e;return t})();var Fu=(t,e)=>e.id;function ob(t,e){if(t&1&&z(0,"app-put-words-exercise",2),t&2){let r=Re().$implicit;G("exercise",r)}}function sb(t,e){if(t&1&&z(0,"app-write-questions-exercise",2),t&2){let r=Re().$implicit;G("exercise",r)}}function ab(t,e){if(t&1&&z(0,"app-write-sentence-exercise",2),t&2){let r=Re().$implicit;G("exercise",r)}}function cb(t,e){if(t&1&&Se(0,ob,1,1)(1,sb,1,1)(2,ab,1,1),t&2){let r=Re().$implicit,n;_t(0,(n=r.type)==="put-words"?0:n==="write-questions"?1:n==="write-sentence"?2:-1)}}function ub(t,e){if(t&1&&(A(0,"div",1)(1,"h3"),ie(2),N(),Fn(3,cb,3,1,null,null,Fu),N()),t&2){let r=e.$implicit;B(2),Ln("",r.id,". ",r.title,""),B(),kn(r.exercises)}}function lb(t,e){if(t&1&&(A(0,"h1"),ie(1),N(),A(2,"div",0)(3,"h2"),ie(4),N(),A(5,"p"),ie(6),N()(),A(7,"div"),Fn(8,ub,5,2,"div",3,Fu),N()),t&2){let r=e.$implicit;B(),Ln("",r.id," ",r.name,""),B(3),dt(r.sections.name),B(2),dt(r.sections.title),B(2),kn(r.sections.activities)}}var ig=(()=>{let e=class e{constructor(){this.lessons=[]}};e.\u0275fac=function(i){return new(i||e)},e.\u0275cmp=J({type:e,selectors:[["app-lessons"]],inputs:{lessons:"lessons"},standalone:!0,features:[X],decls:2,vars:0,consts:[[2,"display","flex","gap","10px","align-items","baseline"],[1,"activity"],[3,"exercise"],["class","activity"]],template:function(i,o){i&1&&Fn(0,lb,10,4,null,null,Fu),i&2&&kn(o.lessons)},dependencies:[ng,tg,rg,en],styles:[`[_nghost-%COMP%] {
         --bright-blue: oklch(51.01% 0.274 263.83);
         --electric-violet: oklch(53.18% 0.28 296.97);
         --french-violet: oklch(47.66% 0.246 305.88);
